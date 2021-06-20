@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Auto remover",
+  "description": "Removes the boxes at the end of the video on Youtube.",
+  "version": "0.1.0",
+  "browser_action": {
+    "default_icon": "/inc/icon32.png",
+    "icons": {
+      "16": "/inc/icon16.png",
+      "32": "/inc/icon32.png",
+      "48": "/inc/icon48.png",
+      "64": "/inc/icon64.png",
+      "128": "/inc/icon128.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.youtu.be/*"
+      ],
+      "js": [
+        "/js/script.js"
+      ],
+      "css": [
+        "/css/style.css"
+      ]
+    }
+  ]
+}
